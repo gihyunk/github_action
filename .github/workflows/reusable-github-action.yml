@@ -12,8 +12,7 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v2
-        with:
-          username: ${{ inputs.username }}
+
       - name: hello
         run: echo "hello. It is reuseable action. ${{ inputs.username }}"
 
