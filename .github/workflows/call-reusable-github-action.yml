@@ -1,15 +1,14 @@
 name: Call a reusable workflow
 on: [push]
 
-
-
-jobs:
-  strategy:
+jobs:    
+  call-workflow-passing-data:
+    strategy:
       matrix:
         service:
           - sub-project-a
           - sub-project-b
-  call-workflow-passing-data:
+          - sub-project-c
     uses: ./.github/workflows/reusable-github-action.yml
     with:
       username: ${{ matrix.service }}
