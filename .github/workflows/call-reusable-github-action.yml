@@ -1,16 +1,23 @@
 name: Call a reusable workflow
-on: [push]
+#on: [push]
+on:
+  push:
+    paths:
+      - 'sub-project-a/**'
 
 jobs:    
   call-workflow-passing-data:
-    strategy:
-      matrix:
-        service:
-          - sub-project-a
-          - sub-project-b
-          - sub-project-c
-    runs-on: [general-x64]
-    steps:
-      - uses: ./.github/workflows/reusable-github-action.yml
+    uses: ./.github/workflows/reusable-github-action.yml
         with:
-          username: ${{ matrix.service }}
+          username: mona
+    # strategy:
+    #   matrix:
+    #     service:
+    #       - sub-project-a
+    #       - sub-project-b
+    #       - sub-project-c
+    # runs-on: [linux]
+    # steps:
+    #   - uses: ./.github/workflows/reusable-github-action.yml
+    #     with:
+    #       username: ${{ matrix.service }}
