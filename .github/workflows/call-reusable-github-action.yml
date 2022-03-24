@@ -6,7 +6,8 @@ env:
 on:
   push:
     paths:
-      - '$SUB_PATH/**'
+      - 'sub-project-a/**'
+      - 'sub-project-b/**'
 
 jobs:    
   call-workflow-passing-data:
