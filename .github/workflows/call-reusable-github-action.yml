@@ -1,15 +1,18 @@
 name: Call a reusable workflow
 #on: [push]
+env:
+  SUB_PATH: sub-project-a
+
 on:
   push:
     paths:
-      - 'sub-project-a/**'
+      - '$SUB_PATH/**'
 
 jobs:    
   call-workflow-passing-data:
     uses: ./.github/workflows/reusable-github-action.yml
     with:
-      username: mona
+      project: $SUB_PATH
     # strategy:
     #   matrix:
     #     service:
