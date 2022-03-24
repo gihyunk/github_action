@@ -8,8 +8,8 @@ on:
 jobs:    
   call-workflow-passing-data:
     uses: ./.github/workflows/reusable-github-action.yml
-        with:
-          username: mona
+    with:
+      username: mona
     # strategy:
     #   matrix:
     #     service:
