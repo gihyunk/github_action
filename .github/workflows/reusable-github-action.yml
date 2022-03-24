@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: ./.github/workflows/my-action
+      - uses: actions/checkout@v2
         with:
           username: ${{ inputs.username }}
       - name: hello
