@@ -10,6 +10,6 @@ jobs:
   #   uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
 
   call-workflow-passing-data:
-    uses: github.com/gihyunk/github_action/.github/workflows/reusable-githyb-action.yml
+    uses: ../.github/workflows/reusable-github-action.yml
     with:
       username: mona
