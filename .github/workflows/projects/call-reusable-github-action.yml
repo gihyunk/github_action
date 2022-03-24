@@ -3,6 +3,6 @@ on: [push]
 
 jobs:
   call-workflow-passing-data:
-    uses: ./.github/workflows/reusable-github-action.yml
+    uses: ../.github/workflows/reusable-github-action.yml
     with:
       username: mona
