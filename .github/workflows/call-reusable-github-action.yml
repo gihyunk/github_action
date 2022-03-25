@@ -1,13 +1,14 @@
 name: Call a reusable workflow
-#on: [push]
 env:
   SUB_PATH: sub-project-a
 
 on:
   push:
+    branches:
+      - main
+      - releases/**
     paths:
-      - 'sub-project-a/**'
-      - 'sub-project-b/**'
+      - "$SUB_PATH/**"
 
 jobs:    
   call-workflow-passing-data:
@@ -20,7 +21,7 @@ jobs:
     #       - sub-project-a
     #       - sub-project-b
     #       - sub-project-c
-    # runs-on: [linux]
+    # runs-on: ubuntu-latest
     # steps:
     #   - uses: ./.github/workflows/reusable-github-action.yml
     #     with:
