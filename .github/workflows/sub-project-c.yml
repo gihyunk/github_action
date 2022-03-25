@@ -8,14 +8,11 @@ on:
       - main
       - releases/**
 
-env:
-  SUB_PATH: sub-project-c
-
 jobs:    
   call-workflow-passing-data:
     uses: ./.github/workflows/reusable-github-action.yml
     with:
-      project: $SUB_PATH
+      project: sub-project-c
     #   test: push.
     # strategy:
     #   matrix:
