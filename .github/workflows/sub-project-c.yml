@@ -1,0 +1,23 @@
+name: Call a reusable workflow
+
+on:
+  push:
+    branches:
+      - main
+      - releases/**
+
+jobs:    
+  call-workflow-passing-data:
+    # uses: ./.github/workflows/reusable-github-action.yml
+    # with:
+    #   project: $SUB_PATH
+    #   test: push.
+    strategy:
+      matrix:
+        service:
+          - sub-project-c
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/reusable-github-action.yml
+        with:
+          project: ${{ matrix.service }}
