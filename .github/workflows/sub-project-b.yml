@@ -13,12 +13,3 @@ jobs:
     uses: ./.github/workflows/reusable-github-action.yml
     with:
       project: sub-project-b
-    # strategy:
-    #   matrix:
-    #     service:
-    #       - sub-project-b
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - uses: ./.github/workflows/reusable-github-action.yml
-    #     with:
-    #       project: ${{ matrix.service }}
