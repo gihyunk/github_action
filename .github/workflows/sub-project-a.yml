@@ -4,9 +4,9 @@ on:
   push:
     path:
       - 'sub-project-a/**'
-    branches:
-      - main
-      - releases/**
+    # branches:
+    #   - main
+    #   - releases/**
 
 jobs:    
   call-workflow-passing-data:
