@@ -2,7 +2,7 @@ name: Call a reusable workflow
 
 on:
   push:
-    path:
+    paths:
       - 'sub-project-b/**'
     # branches:
     #   - main
