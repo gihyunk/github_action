@@ -1,3 +1,3 @@
 # github_action
 
-Added pull request template
+Added pull request template.
