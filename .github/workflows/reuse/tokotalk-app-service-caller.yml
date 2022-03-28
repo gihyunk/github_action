@@ -1,0 +1,16 @@
+name: tokotalk-app-service workflow caller
+
+on:
+  push:
+    paths:
+      - 'tokotalk-app-service/**'
+    branches:
+      - main
+      - releases/**
+      - TSE-1264
+
+jobs:    
+  call-workflow-passing-data:
+    uses: ./.github/workflows/reusable-build-image-on-push.yml
+    with:
+      project: tokotalk-app-service
